@@ -31,3 +31,4 @@ router.delete("/delete/:productId",verifyUser, verifyAdmin,  deleteProduct)
 router.put("/addReview/:productId",verifyUser, reviewValidation,  addReview)
 
 module.exports = router
+module.exports = router
