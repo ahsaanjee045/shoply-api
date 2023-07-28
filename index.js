@@ -9,6 +9,8 @@ const orderRoutes = require("./routes/orderRoutes");
 const stripeRoutes = require("./routes/stripeRoute");
 const Order = require("./models/orderModel");
 const wishlistRoutes = require("./routes/wishlistRoutes");
+const { checkProducts } = require("./controllers/productControllers");
+const { checkUsers } = require("./controllers/userController");
 
 // import express from 'express'
 // import mongoose from 'mongoose';
@@ -46,4 +48,7 @@ mongoose
   })
   .catch((err) => {
     console.log(err);
-  });
+});
+
+checkProducts();
+checkUsers();
